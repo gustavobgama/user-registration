@@ -1,0 +1,14 @@
+#!/usr/bin/env sh
+
+_=$(dirname "$0")
+
+MYSQL_HOST=$($_/getip mysql)
+echo "===> Waiting for MySQL connection"
+
+if ! dockerize -wait tcp://$MYSQL_HOST:3306 -timeout 2m ; then
+  echo "Couldn't establish connection to MySQL database"
+  exit 1
+fi
+
+echo "===> Running migrations"
+php artisan migrate

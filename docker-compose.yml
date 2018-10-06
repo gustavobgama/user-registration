@@ -1,0 +1,48 @@
+version: '3.7'
+
+networks:
+  backend:
+
+services:
+  nginx:
+    image: nginx:1.15.5-alpine
+    depends_on:
+      - php
+    ports:
+      - '80:80'
+    volumes:
+      - ./docker/nginx/conf.d:/etc/nginx/conf.d
+      - .:/opt/app
+    networks:
+      - backend
+  
+  php:
+    build: docker/php
+    working_dir: /opt/app
+    depends_on:
+      - mysql
+    volumes:
+      - .:/opt/app
+    networks:
+      - backend
+
+  node:
+    build: docker/node
+    working_dir: /opt/app
+    volumes:
+      - .:/opt/app
+    networks:
+      - backend
+
+  mysql:
+    image: mysql:5.7.17
+    ports:
+      - '3306:3306'
+    environment:
+      MYSQL_DATABASE: application
+      MYSQL_USER: root
+      MYSQL_PASSWORD: 
+      MYSQL_ALLOW_EMPTY_PASSWORD: 'yes'
+    networks:
+      - backend
+      
