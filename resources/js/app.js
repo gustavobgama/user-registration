@@ -10,13 +10,25 @@ require('./bootstrap');
 window.Vue = require('vue');
 
 /**
+ * Import ElementUI
+ */
+Vue.use(require('element-ui'));
+
+/**
+ * Import VueFormWizard
+ */
+Vue.use(require('vue-form-wizard'));
+
+/**
  * Next, we will create a fresh Vue application instance and attach it to
  * the page. Then, you may begin adding components to this application
  * or customize the JavaScript scaffolding to fit your unique needs.
  */
+import CreateSteps from './components/CreateSteps';
 
-Vue.component('example-component', require('./components/ExampleComponent.vue'));
-
-const app = new Vue({
-    el: '#app'
+new Vue({
+    el: '.main',
+    components: {
+        'create-steps': CreateSteps,
+    },
 });

@@ -18,5 +18,10 @@
         "lodash": "^4.17.5",
         "popper.js": "^1.12",
         "vue": "^2.5.7"
+    },
+    "dependencies": {
+        "element-ui": "^2.4.8",
+        "font-awesome": "^4.7.0",
+        "vue-form-wizard": "^0.8.4"
     }
 }
