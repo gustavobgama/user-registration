@@ -18,12 +18,13 @@ class CreateUsersTable extends Migration
             $table->string('firstname');
             $table->string('lastname');
             $table->string('phone');
-            $table->string('address');
-            $table->string('address_number');
-            $table->string('zipcode');
-            $table->string('city');
-            $table->string('account_owner');
-            $table->string('iban');
+            $table->string('address')->nullable();
+            $table->string('address_number')->nullable();
+            $table->string('zipcode')->nullable();
+            $table->string('city')->nullable();
+            $table->string('account_owner')->nullable();
+            $table->string('iban')->nullable();
+            $table->string('paymentdata_id')->nullable();
             $table->timestamps();
         });
     }

@@ -12,3 +12,4 @@
 */
 
 Route::get('/', 'UserRegistration@index');
+Route::post('/user/save', 'UserRegistration@save');
