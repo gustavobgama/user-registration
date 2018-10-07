@@ -15,11 +15,16 @@ More information on how to install both [here](https://docs.docker.com/engine/in
     $ git clone https://gustavobgama@bitbucket.org/gustavobgama/user-registration.git ./UserRegistration
     $ cd UserRegistration && cp .env.example .env
     $ docker-compose up -d
-    $ wait some moments and then check the application running here: http://127.0.0.1/
+
+Wait some moments and then check the application running [here](http://127.0.0.1/). Not availabe ? Use `docker-compose logs -f php` to see what's going on.
 
 ## Run tests
 
     $ docker-compose exec php ./vendor/bin/phpunit --testdox
+
+## Database dump
+
+The database dump is here: `database/dump.sql`
 
 ## What can be made better ?
 
