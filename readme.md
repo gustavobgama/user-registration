@@ -28,8 +28,8 @@ The database dump is here: `database/dump.sql`
 
 ## What can be made better ?
 
-    * Validations relies on javascript, must be implemented backend validations using form request classes for example.
-    * The frontend code can be improved (the form-step component)
-    * Inject mocks at some tests to not touch the wunder API
-    * Add frontend tests
-    * Using the bitbucket pipeline to do a "live" deploy
+* Validations relies on javascript, must be implemented backend validations using form request classes for example.
+* The frontend code can be improved (the form-step component)
+* Inject mocks at some tests to not touch the wunder API
+* Add frontend tests
+* Using the bitbucket pipeline to do a "live" deploy
