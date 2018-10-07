@@ -24,11 +24,11 @@ Vue.use(require('vue-form-wizard'));
  * the page. Then, you may begin adding components to this application
  * or customize the JavaScript scaffolding to fit your unique needs.
  */
-import CreateSteps from './components/CreateSteps';
+import FormSteps from './components/FormSteps';
 
 new Vue({
     el: '.main',
     components: {
-        'create-steps': CreateSteps,
+        'form-steps': FormSteps,
     },
 });

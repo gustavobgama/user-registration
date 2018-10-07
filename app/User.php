@@ -10,7 +10,5 @@ class User extends Authenticatable
 {
     use Notifiable;
 
-    protected $guarded = [
-        'paymentdata_id',
-    ];
+    protected $guarded = [];
 }

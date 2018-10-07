@@ -4,7 +4,7 @@
 <div class="card">
     <div class="card-header">{{ __("User Registration") }}</div>
     <div class="card-body">
-        <create-steps user-data="{{ $user }}"></create-steps>
+        <form-steps user-data="{{ $user }}"></form-steps>
     </div>
 </div>
 @endsection
